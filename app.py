@@ -8,7 +8,7 @@ app = Flask(__name__)
 def ficha():
   return render_template('index.html')
 
-@app.route('/enviado', methods=['POST'])
+@app.route('/enviado')
 def resultado():
   link = str(request.form['link'])
   escreve(link)
