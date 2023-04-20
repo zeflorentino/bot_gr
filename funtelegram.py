@@ -3,7 +3,7 @@ import json
 import requests
 import os
 from datetime import datetime, timedelta
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup
 from oauth2client.service_account import ServiceAccountCredentials
 
 GOOGLE_SHEETS_CREDENTIALS = os.environ['GOOGLE_SHEETS_CREDENTIALS']
@@ -19,7 +19,7 @@ token = os.environ["TELEGRAM_API_KEY"]
 
 def escreve(link):
   requisicao = requests.get(link)
-  html = bs(requisicao.content)
+  html = BeautifulSoup(requisicao.content)
   titulo = html.findAll('h1',{'class':'content-head__title'})[0]
   titulo = titulo.text
   linhafina = html.findAll('p',{'class':'feed-post-body-resumo'})[0]
