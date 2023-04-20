@@ -10,6 +10,6 @@ def ficha():
 
 @app.route('/enviado', methods=['POST'])
 def resultado():
-  noticia = request.form['link']
+  noticia = str(request.form['link'])
   escreve(noticia)
   return 'Enviado.'
