@@ -19,7 +19,7 @@ token = os.environ["TELEGRAM_API_KEY"]
 
 def escreve(link):
   requisicao = requests.get(link)
-  html = BeautifulSoup(requisicao.content)
+  html = BeautifulSoup(requisicao.content, features = "html.parser")
   titulo = html.findAll('h1',{'class':'content-head__title'})[0]
   titulo = titulo.text
   linhafina = html.findAll('p',{'class':'feed-post-body-resumo'})[0]
