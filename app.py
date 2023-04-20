@@ -1,9 +1,4 @@
 from flask import Flask, request, render_template
-import json
-import requests
-import os
-from datetime import datetime, timedelta
-import pandas as pd
 
 from funtelegram import escreve
 
