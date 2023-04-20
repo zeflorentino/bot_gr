@@ -1,0 +1,6 @@
+flask
+gunicorn
+requests
+datetime
+gspread
+oauth2client
