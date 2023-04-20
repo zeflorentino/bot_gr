@@ -3,6 +3,7 @@ import json
 import requests
 import os
 from datetime import datetime, timedelta
+from bs4 import BeautifulSoup as bs
 from oauth2client.service_account import ServiceAccountCredentials
 
 GOOGLE_SHEETS_CREDENTIALS = os.environ['GOOGLE_SHEETS_CREDENTIALS']
